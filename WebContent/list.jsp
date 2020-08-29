@@ -41,7 +41,7 @@
 		메시지 번호: ${message.id} </td>
 		<td>손님 이름: ${message.guestName} </td>
 		<td>메시지: ${message.message} </td>
-		<td><a href="confirmUpdate.jsp?messageId=${message.id}">[수정하기]</a></td>
+		<td><a href="confirmUpdate.jsp?messageId=${message.id}&guestName=${message.guestName}">[수정하기]</a></td>
 		<td><a href="confirmDeletion.jsp?messageId=${message.id}">[삭제하기]</a>
 		
 		</td>
