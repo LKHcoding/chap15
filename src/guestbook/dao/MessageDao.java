@@ -111,11 +111,11 @@ public class MessageDao {
 			JdbcUtil.close(pstmt);
 		}
 	}
+
 	public int update(Connection conn, int messageId, String message) throws SQLException {
 		PreparedStatement pstmt = null;
 		try {
-			pstmt = conn.prepareStatement("update guestbook_message set message="
-					+ "? where message_id = ?");
+			pstmt = conn.prepareStatement("update guestbook_message set message=" + "? where message_id = ?");
 			pstmt.setString(1, message);
 			pstmt.setInt(2, messageId);
 			return pstmt.executeUpdate();

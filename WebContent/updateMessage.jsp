@@ -3,6 +3,8 @@
 <%@ page import="guestbook.service.UpdateMessageService" %>
 <%@ page import="guestbook.service.InvalidPassowrdException" %>
 <%
+	request.setCharacterEncoding("utf-8");
+
 	int messageId = Integer.parseInt(request.getParameter("messageId"));
 	String password = request.getParameter("password");
 	String message = request.getParameter("message");
