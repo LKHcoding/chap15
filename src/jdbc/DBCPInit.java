@@ -23,7 +23,8 @@ public class DBCPInit extends HttpServlet {
 
 	private void loadJDBCDriver() {
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			// Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 		} catch (ClassNotFoundException ex) {
 			throw new RuntimeException("fail to load JDBC Driver", ex);
 		}
@@ -31,9 +32,12 @@ public class DBCPInit extends HttpServlet {
 
 	private void initConnectionPool() {
 		try {
-			String jdbcUrl = "jdbc:mysql://localhost:3306/Guestbook?"
-		+ "useUnicode=true&characterEncoding=utf8"
-					 + "&serverTimezone=UTC&useSSL=false";
+			/*
+			 * String jdbcUrl = "jdbc:mysql://localhost:3306/Guestbook?" +
+			 * "useUnicode=true&characterEncoding=utf8" +
+			 * "&serverTimezone=UTC&useSSL=false";
+			 */
+			String jdbcUrl = "jdbc:mysql://localhost:3306/Guestbook?" + "useUnicode=true&characterEncoding=utf8";
 			String username = "root";
 			String pw = "rootroot";
 
